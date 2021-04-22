@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.scuavailable.available">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <uses-feature android:name="android.hardware.camera2.full" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature android:name="android.hardware.camera.front" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".base.UniteApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/TranslucentTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".scan.ScanNumberShowActivity"></activity>
+        <activity android:name=".scan.ScanLetterShowActivity" />
+        <activity android:name=".school.TestListActivity" />
+        <activity android:name=".scan.LetterSettingActivity" />
+        <activity android:name=".school.ViewPaperDetailActivity" />
+        <activity android:name=".school.RequestModifyActivity" />
+        <activity android:name=".register.RegisterActivity" />
+        <activity android:name=".about.AboutActivity" />
+        <activity android:name=".scan.PaperCountActivity" />
+        <activity android:name=".scan.ScanActivity" />
+        <activity android:name=".login.LoginActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
