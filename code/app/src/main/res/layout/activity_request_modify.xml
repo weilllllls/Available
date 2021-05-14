@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_login_input_rounded"
+  >
+
+    <include layout="@layout/layout_request_modify_nav"/>
+
+    <EditText
+    android:id="@+id/et_request_modify_student_id"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginLeft="18dp"
+    android:background="@android:color/transparent"
+    android:hint="请输入学生学号"
+    android:maxLines="1"
+    android:layout_marginTop="30dp"
+    android:textColor="@color/login_input_color"
+    android:textColorHint="@color/login_input_hint_color"
+    android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/et_request_modify_course_id"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="18dp"
+        android:background="@android:color/transparent"
+        android:hint="请输入课程号"
+        android:maxLines="1"
+        android:textColor="@color/login_input_color"
+        android:textColorHint="@color/login_input_hint_color"
+        android:textSize="16sp" />
+    <EditText
+        android:id="@+id/et_request_modify_section"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="18dp"
+        android:background="@android:color/transparent"
+        android:hint="请输入课序号"
+        android:maxLines="1"
+        android:textColor="@color/login_input_color"
+        android:textColorHint="@color/login_input_hint_color"
+        android:textSize="16sp" />
+    <EditText
+    android:id="@+id/et_request_modify_reason"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:layout_gravity="center_horizontal"
+    android:background="@android:color/transparent"
+    android:layout_marginLeft="18dp"
+    android:hint="请输入申请理由"
+    android:maxLines="1"
+    android:textColor="@color/login_input_color"
+    android:textColorHint="@color/login_input_hint_color"
+    android:textSize="16sp" />
+
+
+
+    <Button
+        android:id="@+id/btn_request_modify_submit"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/login_login_btn"
+        android:gravity="center"
+        android:text="提交申请"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+</LinearLayout>
