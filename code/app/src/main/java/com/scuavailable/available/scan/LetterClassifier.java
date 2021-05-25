@@ -17,6 +17,7 @@ import java.nio.channels.FileChannel;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+// change
 public class LetterClassifier {
     private static final String LOG_TAG = LetterClassifier.class.getSimpleName();
 
