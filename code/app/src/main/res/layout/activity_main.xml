@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background_color">
+
+    <ImageButton
+        android:id="@+id/ib_main_setting"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/ic_setting"
+        android:layout_margin="27dp"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_main_dateinfo"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_below="@id/ib_main_setting">
+        <TextClock
+            android:id="@+id/tv_main_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="65sp"
+            android:textColor="@color/main_time_color"
+            android:includeFontPadding="false"
+            android:format12Hour="hh:mm"
+            android:layout_marginLeft="10dp"/>
+        <TextView
+            android:id="@+id/tv_main_timename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:layout_marginBottom="10dp"
+            android:text="下午"
+            android:layout_toRightOf="@id/tv_main_time"
+            android:layout_alignBottom="@id/tv_main_time"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/main_timename_color"
+            android:textStyle="bold"
+            android:textSize="25sp"/>
+        <TextView
+            android:id="@+id/tv_main_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2020/10/23"
+            android:layout_below="@id/tv_main_timename"
+            android:layout_alignRight="@id/tv_main_timename"
+            android:textColor="@color/main_date_color"
+            android:textSize="18sp"/>
+
+        <LinearLayout
+            android:id="@+id/ll_main_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_main_date"
+            android:layout_alignRight="@id/tv_main_date"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tv_main_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="成都"
+                android:textColor="@color/main_location_color"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_location"/>
+        </LinearLayout>
+
+    <View
+        android:id="@+id/v_main_vertical_line"
+        android:layout_width="3dp"
+        android:layout_height="match_parent"
+        android:background="@color/main_vertical_line"
+        android:layout_toRightOf="@id/ll_main_location"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"/>
+
+        <LinearLayout
+            android:id="@+id/ll_main_weather"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_toRightOf="@id/v_main_vertical_line"
+            android:padding="5dp"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/iv_main_weathericon"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/ic_weather_sun"
+                android:layout_gravity="center"
+                />
+            <TextView
+                android:id="@+id/tv_main_weather"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="17℃ 晴"
+                android:gravity="center"
+                android:layout_marginTop="15dp"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@color/main_weather_color"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_main_scan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        android:background="@drawable/bg_main_scan"
+        android:gravity="center"
+        android:paddingBottom="10dp">
+
+        <ImageButton
+            android:id="@+id/ib_main_scan"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginBottom="35dp"
+            android:background="@drawable/ic_scan" />
+
+        <TextView
+            android:id="@+id/tv_main_scrolluptext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="上滑以使用"
+            android:layout_below="@id/ib_main_scan"
+            android:textColor="@color/main_scan_indicator_text_color"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="30dp"
+            />
+        <ImageView
+            android:id="@+id/iv_main_scrollup"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/ic_scrollup"
+            android:layout_toRightOf="@id/tv_main_scrolluptext"
+            android:layout_alignBottom="@id/tv_main_scrolluptext"
+            android:layout_marginLeft="10dp"/>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

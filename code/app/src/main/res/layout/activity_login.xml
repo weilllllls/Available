@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_login_nav"/>
+
+    <LinearLayout
+        android:id="@+id/ll_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_login_input_rounded"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center_vertical">
+
+            <EditText
+                android:id="@+id/et_login_username"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:drawablePadding="10dp"
+                android:drawableLeft="@drawable/ic_login_username_default"
+                android:ellipsize="start"
+                android:hint="@string/login_hint_account"
+                android:inputType="textVisiblePassword"
+                android:singleLine="true"
+                android:textColor="@color/login_input_color"
+                android:textColorHint="@color/login_input_hint_color"
+                android:textSize="16sp" />
+
+            <ImageButton
+                android:id="@+id/ib_delete_username"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:paddingRight="10dp"
+                android:paddingLeft="20dp"
+                android:src="@drawable/ic_edittext_clear"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/login_line_bg_color" />
+
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="8dp"
+            android:background="@android:color/transparent"
+            android:drawablePadding="10dp"
+            android:drawableLeft="@drawable/ic_login_password_default"
+            android:hint="@string/login_hint_password"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:textColor="@color/login_input_color"
+            android:textColorHint="@color/login_input_hint_color"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+
+    <Button
+    android:id="@+id/btn_login"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:layout_marginBottom="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="30dp"
+    android:background="@drawable/login_login_btn"
+    android:gravity="center"
+    android:text="@string/login_login_btn"
+    android:textColor="@color/white"
+    android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btn_jump_register"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/login_login_btn"
+        android:gravity="center"
+        android:text="@string/register_title_text"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+
+</LinearLayout>
